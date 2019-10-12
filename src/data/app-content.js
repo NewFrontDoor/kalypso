@@ -163,7 +163,7 @@ const menu = [
     ]
   },
   {
-    link: 'link-four',
+    link: '/sermons',
     text: 'Sermons'
   },
   {

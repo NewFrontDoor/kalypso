@@ -8,7 +8,9 @@ import Page from './routes/page';
 import FooterIcons from './components/footer-icons';
 import Footer from './routes/footer';
 import ActionBlock from './components/action-block';
+import SermonBlock from './components/sermon-block';
 import {contact, portfolio, menu, heading, slides} from './data/app-content';
+import CalendarBlock from './components/calendar-block';
 
 const Container = styled.div`
   margin-right: auto;
@@ -53,6 +55,8 @@ export default function App() {
               />
             )}
           />
+          <Route exact path="/sermons" render={() => <Page heading={['Sermons']} content={<SermonBlock/>}/>} />
+          <Route exact path="/calendar" render={() => <Page heading={['Calendar']} content={<CalendarBlock/>}/>} />
           <Route path="/:path" render={() => <Page heading={['New page']} />} />
         </Switch>
       </Container>
