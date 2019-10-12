@@ -11,11 +11,13 @@ const Content = styled.article`
   min-height: 550px;
 `;
 
-export default function Page({heading}) {
+export default function Page({heading, content}) {
   return (
     <Grid>
       <Header heading={heading} />
-      <Content />
-    </Grid>
+      <Content>
+        {content}
+      </Content>
+      </Grid>
   );
 }
